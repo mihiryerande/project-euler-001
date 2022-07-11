@@ -2,21 +2,23 @@
 #     Multiples of 3 or 5
 #
 # Description:
-#     If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
+#     If we list all the natural numbers below 10
+#       that are multiples of 3 or 5,
+#       we get 3, 5, 6 and 9.
 #     The sum of these multiples is 23.
 #     
 #     Find the sum of all the multiples of 3 or 5 below 1000.
 
-def mult_sum(n, x):
+def mult_sum(n: int, x: int) -> int:
     """
-    Calculates the sum of all multiples of x which are less than n.
+    Returns the sum of all multiples of x which are less than n.
 
     Args:
         n (int): Natural number
         x (int): Natural number
 
     Returns:
-        Sum of all natural numbers less than n which are multiples of x
+        (int): Sum of all natural numbers less than n which are multiples of x
 
     Raises:
         AssertError: if incorrect params are given
@@ -28,20 +30,20 @@ def mult_sum(n, x):
     return int(x * (nx * (nx + 1) / 2))
 
 
-def main(n):
+def main(n: int) -> int:
     """
-    Calculates the sum of all natural numbers less than n which are multiples of 3 or 5.
+    Returns the sum of all natural numbers less than n which are multiples of 3 or 5.
 
     Args:
         n (int): Natural number
 
     Returns:
-        Sum of all natural numbers less than n which are multiples of 3 or 5.
+        (int): Sum of all natural numbers less than n which are multiples of 3 or 5
 
     Raises:
         AssertError: if incorrect params are given
     """
-    assert type(n) == int and n > 0  # `n` is a natural number
+    assert type(n) == int and n > 0
 
     # Calculate sum of multiples of 3
     s3 = mult_sum(n, 3)
